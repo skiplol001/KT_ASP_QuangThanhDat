@@ -35,11 +35,9 @@
         {
             string sql = "SELECT * FROM Sach WHERE 1=1";
             
-            // Lọc theo chủ đề
             if (ddlChuDe.SelectedValue != "0")
                 sql += " AND MaCD = " + ddlChuDe.SelectedValue;
 
-            // Lọc theo tên sách (Tìm gần đúng)
             if (!string.IsNullOrEmpty(txtSearch.Text))
                 sql += " AND TenSach LIKE N'%" + txtSearch.Text.Trim() + "%'";
 
